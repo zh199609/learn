@@ -406,3 +406,26 @@ local               juming-ngxin
 所有docker容器内的卷，没有指定目录的情况下都是在 /var/lib/docker/volumes/xxxx/_data
 
 我们通过具名挂载可以方便的找到我们的一个卷，大多数情况在使用的具名挂载
+
+
+
+
+
+
+
+**初始Dockerfile**
+Dockerfile就是用来构建docker镜像的构建文件，命令脚本
+
+通过这个脚本可以生成镜像,镜像是一层一层，脚本是一个一个的
+
+```shell
+FROM centos
+VOLUME ["volume01","volume02"]
+CMD echo "---end---"
+CMD /bin/bash
+```
+
+
+
+
+
